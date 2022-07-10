@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanos</title>
+  </head>
+  <body>
+    <script>
+      // Language: JavaScript
+      // count population of thanos's planet
+      function thanosPopulation() {
+        let thanosPopulation0 = 1;
+        for (var day = 2; day < 51; day++) {
+          if (day % 3 == 0) {
+            var thanosPopulation = thanosPopulation0 - Math.ceil(thanosPopulation0 / 2);
+          } else {
+            var thanosPopulation = thanosPopulation0 * 3;
+          }
+          thanosPopulation0 = thanosPopulation;
+        }
+        document.write(`Day ${50} | Thanos Population: ${thanosPopulation0}`);
+        console.log(`Day ${50} | Thanos Population: ${thanosPopulation0}`);
+      }
+      console.log(thanosPopulation());
+    </script>
+  </body>
+</html>
